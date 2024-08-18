@@ -1,0 +1,77 @@
+﻿@model List<Codeyad.CoreLayer.DTOs.Categories.CategoryDTO>
+<header class="nav">
+    <div class="nav__holder nav--sticky">
+        <div class="container relative">
+            <div class="flex-parent">
+
+                <!-- Side Menu Button -->
+                <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu">
+                    <span class="nav-icon-toggle__box">
+                        <span class="nav-icon-toggle__inner"></span>
+                    </span>
+                </button>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-success left" style="margin-bottom: 3px" asp-area="Admin" asp-controller="Post" asp-action="Index">پنل ادمین</a>
+                }
+                else
+                {
+                <a class="btn btn-success left" style="margin-bottom: 3px" href="auth/register">ورود/عضویت</a>
+                }
+
+                <!-- Nav-wrap -->
+                <nav class="flex-child nav__wrap d-none d-lg-block">
+                    <ul class="nav__menu">
+                        <li>
+                            <a href="/">صفحه اصلی</a>
+                        </li>
+                        @foreach (var category in Model.Where(c => c.ParentId == null || c.ParentId == 0))
+                        {
+                            bool hasSub = Model.Any(c => c.ParentId == category.Id);
+                            if (hasSub)
+                            {
+                                <li class="nav__dropdown">
+                                    <a asp-page="Search" asp-route-categorySlug="@category.Slug">@category.Title</a>
+                                    <ul class="nav__dropdown-menu">
+                                        @foreach (var sub in Model.Where(c => c.ParentId == category.Id))
+                                        {
+                                            <li><a asp-page="Search" asp-route-categorySlug="@sub.Slug">@sub.Title</a></li>
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li>
+                                    <a action="/search" asp-route-categorySlug="@category.Slug">@category.Title</a>
+                                </li>
+                            }
+                        }
+
+                    </ul> <!-- end menu -->
+                </nav> <!-- end nav-wrap -->
+                <!-- Nav Right -->
+                <div class="nav__right">
+
+                    <!-- Search -->
+                    <div class="nav__right-item nav__search">
+                        <a href="#" class="nav__search-trigger" id="nav__search-trigger">
+                            <i class="ui-search nav__search-trigger-icon"></i>
+                        </a>
+                        <div class="nav__search-box" id="nav__search-box">
+                            <form action="/search" class="nav__search-form">
+                                <input type="text" name="title" placeholder="جستجو مقالات" class="nav__search-input">
+                                <button type="submit" class="search-button btn btn-lg btn-color btn-button">
+                                    <i class="ui-search nav__search-icon"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div> <!-- end nav right -->
+
+            </div> <!-- end flex-parent -->
+        </div> <!-- end container -->
+
+    </div>
+</header>

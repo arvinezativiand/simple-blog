@@ -1,0 +1,14 @@
+C:\C#\FirstApp\another app\Codeyad.DataLayer\bin\Release\net8.0\Codeyad.DataLayer.deps.json
+C:\C#\FirstApp\another app\Codeyad.DataLayer\bin\Release\net8.0\Codeyad.DataLayer.runtimeconfig.json
+C:\C#\FirstApp\another app\Codeyad.DataLayer\bin\Release\net8.0\Codeyad.DataLayer.dll
+C:\C#\FirstApp\another app\Codeyad.DataLayer\bin\Release\net8.0\Codeyad.DataLayer.pdb
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.csproj.AssemblyReference.cache
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.AssemblyInfoInputs.cache
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.AssemblyInfo.cs
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.csproj.CoreCompileInputs.cache
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.dll
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\refint\Codeyad.DataLayer.dll
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.pdb
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\Codeyad.DataLayer.genruntimeconfig.cache
+C:\C#\FirstApp\another app\Codeyad.DataLayer\obj\Release\net8.0\ref\Codeyad.DataLayer.dll

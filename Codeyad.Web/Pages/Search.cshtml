@@ -1,0 +1,80 @@
+﻿@page "{handler?}"
+@using Codeyad.CoreLayer.DTOs.Categories;
+@using Codeyad.CoreLayer.Utilities;
+@using Codeyad.CoreLayer.Services.Categories;
+@model Codeyad.Web.Pages.SearchModel
+@inject ICategoryService _categoryService;
+@{
+    CategoryDTO category = null;
+    string search = null;
+    if (!string.IsNullOrEmpty(Model.Post.filterParams.CategorySlug))
+    {
+        category = _categoryService.GetCategoryBy(Model.Post.filterParams.CategorySlug);
+        if (category != null)
+        {
+            search = category.Title;
+        }
+    }
+    else
+    {
+        search = Model.Post.filterParams.Title ?? "مقالات سایت";
+    }
+    ViewData["Title"] = search;
+}
+@section MetaTags {
+    @if (category != null)
+    {
+        <meta name="description" content="@category.MetaDescription" />
+        <meta name="og:description" content="@category.MetaDescription" />
+        <meta name="twitter:description" content="@category.MetaDescription" />
+        <meta name="keywords" content="@category.MetaTag" />
+
+    }
+}
+<div class="main-container container pt-40" id="main-container">
+    <div class="row">
+        <div class="col-lg-8 blog__content mb-72">
+            <h1 class="page-title">نتایج جستجو برای: @search</h1>
+            <div id="ajaxSearch">
+                <partial name="Shared/_SearchView" model="Model.Post" />
+            </div>
+        </div>
+
+
+        <aside class="col-lg-4 sidebar sidebar--right" id="popular_post">
+
+
+        </aside>
+
+    </div>
+</div> 
+@section Scripts{
+    <script>
+        function ajaxPagination(pageId)
+        {
+            const params = new URLSearchParams(window.location.search);
+            var categorySlug = '';
+            var title = '';
+            if (params.has('categorySlug')) {
+                console.log(1)
+                categorySlug = params.get("categorySlug");
+            }
+            if (params.has('title')) {
+                title = params.get("title");
+            }
+            $.ajax({
+                url: `/search/Pagination?pageId=${pageId}&title=${title}&categorySlug=${categorySlug}`,
+                type: "get",
+                beforeSend: function(){
+                    $(".loading").show();
+                },
+                complete: function () {
+                    $(".loading").hide();
+                }
+            }).done(function (data){
+                console.log(2)
+                $("#ajaxSearch").html(data);
+            });
+        }
+    </script>
+}

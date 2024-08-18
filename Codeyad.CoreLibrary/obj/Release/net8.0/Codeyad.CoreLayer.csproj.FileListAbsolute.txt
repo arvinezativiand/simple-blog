@@ -1,0 +1,15 @@
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\bin\Release\net8.0\Codeyad.CoreLayer.deps.json
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\bin\Release\net8.0\Codeyad.CoreLayer.dll
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\bin\Release\net8.0\Codeyad.CoreLayer.pdb
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\bin\Release\net8.0\Codeyad.DataLayer.dll
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\bin\Release\net8.0\Codeyad.DataLayer.pdb
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.csproj.AssemblyReference.cache
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.AssemblyInfoInputs.cache
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.AssemblyInfo.cs
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.csproj.CoreCompileInputs.cache
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad..A032BD20.Up2Date
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.dll
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\refint\Codeyad.CoreLayer.dll
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\Codeyad.CoreLayer.pdb
+C:\C#\FirstApp\another app\Codeyad.CoreLibrary\obj\Release\net8.0\ref\Codeyad.CoreLayer.dll

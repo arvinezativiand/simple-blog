@@ -1,0 +1,22 @@
+﻿@page
+@model Codeyad.Web.Pages.Auth._loginModel
+@{
+    Layout = "Shared/Headers/_AuthLayout";
+    ViewData["Title"] = "ورود به سایت";
+}
+
+<form method="post">
+    <h1>@ViewData["Title"]</h1>
+    <div>
+        <input asp-for="UserName" type="text" placeholder="نام کاربری" required="" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+    <div>
+        <input asp-for="Password" type="password" placeholder="کلمه عبور" required="" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <input type="submit" value="ورود"/>
+        <a asp-page="Register">ثبت نام</a>
+    </div>
+</form>
